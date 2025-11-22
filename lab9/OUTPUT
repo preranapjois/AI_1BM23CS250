@@ -1,0 +1,71 @@
+Knowledge Base (clauses):
+{'~Food(x)', 'Likes(John, x)'}
+{'Food(Peanuts)'}
+{'Food(Apple)'}
+{'Food(Vegetables)'}
+{'Killed(x)', 'Food(y)', '~Eats(x, y)'}
+{'Eats(Anil, Peanuts)'}
+{'Alive(Anil)'}
+{'~Eats(Anil, y)', 'Eats(Harry, y)'}
+{'~Alive(x)', '~Killed(x)'}
+{'Killed(x)', 'Alive(x)'}
+
+Iteration 1: KB size = 11
+Resolving
+  {'Alive(Anil)'}
+  {'~Alive(x)', '~Killed(x)'}
+  -> {frozenset({'~Killed(Anil)'})}
+Resolving
+  {'Eats(Anil, Peanuts)'}
+  {'Killed(x)', 'Food(y)', '~Eats(x, y)'}
+  -> {frozenset({'Food(Peanuts)', 'Killed(Anil)'})}
+Resolving
+  {'Eats(Anil, Peanuts)'}
+  {'~Eats(Anil, y)', 'Eats(Harry, y)'}
+  -> {frozenset({'Eats(Harry, Peanuts)'})}
+Resolving
+  {'~Alive(x)', '~Killed(x)'}
+  {'Killed(x)', 'Alive(x)'}
+  -> {frozenset({'Killed(x_10020)', '~Killed(x_10020)'}), frozenset({'Alive(x_10020)', '~Alive(x_10020)'})}
+Resolving
+  {'~Alive(x)', '~Killed(x)'}
+  {'Killed(x)', 'Food(y)', '~Eats(x, y)'}
+  -> {frozenset({'Food(y_10023)', '~Eats(x_10023, y_10023)', '~Alive(x_10023)'})}
+Resolving
+  {'Food(Apple)'}
+  {'~Food(x)', 'Likes(John, x)'}
+  -> {frozenset({'Likes(John, Apple)'})}
+Resolving
+  {'~Likes(John, Peanuts)'}
+  {'~Food(x)', 'Likes(John, x)'}
+  -> {frozenset({'~Food(Peanuts)'})}
+Resolving
+  {'Killed(x)', 'Food(y)', '~Eats(x, y)'}
+  {'~Food(x)', 'Likes(John, x)'}
+  -> {frozenset({'Likes(John, x_10046)', 'Killed(x_46)', '~Eats(x_46, x_10046)'})}
+Resolving
+  {'Killed(x)', 'Food(y)', '~Eats(x, y)'}
+  {'~Eats(Anil, y)', 'Eats(Harry, y)'}
+  -> {frozenset({'Killed(Harry)', 'Food(y_10049)', '~Eats(Anil, y_10049)'})}
+Resolving
+  {'~Food(x)', 'Likes(John, x)'}
+  {'Food(Peanuts)'}
+  -> {frozenset({'Likes(John, Peanuts)'})}
+Resolving
+  {'~Food(x)', 'Likes(John, x)'}
+  {'Food(Vegetables)'}
+  -> {frozenset({'Likes(John, Vegetables)'})}
+
+Iteration 2: KB size = 23
+Resolving
+  {'Likes(John, Peanuts)'}
+  {'~Likes(John, Peanuts)'}
+  -> {frozenset()}
+
+Derived empty clause -> contradiction (query proved).
+
+Result:
+Query proved: Likes(John, Peanuts)
+
+Name: Prerana P Jois
+USN: 1BM23CS250
