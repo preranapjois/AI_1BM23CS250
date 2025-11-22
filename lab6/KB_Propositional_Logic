@@ -107,7 +107,7 @@ def entails(KB, alpha):
 
     print("Result: KB entails Alpha.")
     return True
-
+#KB base and query
 
 A = Formula('A')
 B = Formula('B')
