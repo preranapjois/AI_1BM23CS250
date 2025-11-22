@@ -1,0 +1,16 @@
+nference process:
+
+--- Iteration 1 ---
+Derived new fact: ('Weapon', ['M1']) from [('Missile', ['x'])]
+Derived new fact: ('Sells', ['West', 'M1', 'Nono']) from [('Missile', ['x']), ('Owns', ['Nono', 'x'])]
+Derived new fact: ('Hostile', ['Nono']) from [('Enemy', ['x', 'America'])]
+
+--- Iteration 2 ---
+Derived new fact: ('Criminal', ['West']) from [('American', ['x']), ('Weapon', ['y']), ('Sells', ['x', 'y', 'z']), ('Hostile', ['z'])]
+
+Derived goal successfully: ('Criminal', ['West'])
+
+Conclusion: West is a Criminal.
+
+Name: Prerana P Jois
+USN: 1BM23CS250
