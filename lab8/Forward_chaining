@@ -2,10 +2,6 @@
 
 from itertools import product
 
-# ---------------------------
-# Helper functions
-# ---------------------------
-
 def is_variable(x):
     return isinstance(x, str) and x[0].islower()
 
