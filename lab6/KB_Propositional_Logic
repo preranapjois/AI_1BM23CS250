@@ -2,19 +2,12 @@
 # Supports AND, OR, NOT, IMPLIES, IFF
 from itertools import product
 
-# -----------------------------------
-# Logical Connectives
-# -----------------------------------
 def AND(p, q): return p and q
 def OR(p, q): return p or q
 def NOT(p): return not p
 def IMPLIES(p, q): return (not p) or q
 def IFF(p, q): return p == q
 
-
-# -----------------------------------
-# Formula Class
-# -----------------------------------
 class Formula:
     def __init__(self, op, *args):
         self.op = op
@@ -53,9 +46,6 @@ class Formula:
         return f"UnknownOp({self.op})"
 
 
-# -----------------------------------
-# Helpers
-# -----------------------------------
 def extract_symbols(formula):
     symbols = set()
     if isinstance(formula.op, str) and len(formula.args) == 0:
@@ -72,10 +62,6 @@ def extract_subformulas(formula):
         subs |= extract_subformulas(arg)
     return subs
 
-
-# -----------------------------------
-# Entailment Function
-# -----------------------------------
 def entails(KB, alpha):
     symbols = sorted(list(extract_symbols(KB) | extract_symbols(alpha)))
 
@@ -123,9 +109,6 @@ def entails(KB, alpha):
     return True
 
 
-# -----------------------------------
-# Knowledge Base and Query
-# -----------------------------------
 A = Formula('A')
 B = Formula('B')
 C = Formula('C')
