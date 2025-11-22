@@ -1,0 +1,36 @@
+Enter number of branches per node: 3
+Enter total number of leaf nodes: 9
+
+Tree depth will be 3 levels (including root).
+
+Enter the values for each leaf node (can be number, inf, -inf):
+Leaf 1: 1
+Leaf 2: 3
+Leaf 3: 5
+Leaf 4: 2
+Leaf 5: 10
+Leaf 6: 16
+Leaf 7: 18
+Leaf 8: 19
+Leaf 9: 20
+
+=== Alpha-Beta Pruning Result ===
+Best value for root: 18.0
+
+=== Game Tree ===
+MAX Node (value=18.0)
+ MIN Node (value=1.0)
+  Leaf Node (value=1.0)
+  Leaf Node (value=3.0)
+  Leaf Node (value=5.0)
+ MIN Node (value=2.0)
+  Leaf Node (value=2.0)
+  Leaf Node (value=10.0)
+  Leaf Node (value=16.0)
+ MIN Node (value=18.0)
+  Leaf Node (value=18.0)
+  Leaf Node (value=19.0)
+  Leaf Node (value=20.0)
+
+Name: Prerana P Jois
+USN: 1BM23CS250
